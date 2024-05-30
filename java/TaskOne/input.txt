@@ -1,0 +1,1 @@
+hi, this is sharmila. This is a text file to demonstrate the working of word frequency counter using java. It is done using filereading and filewriting concept where this program readseach line of th einput file, splits it into words and updates the frequency count of each word ina  hashmap.

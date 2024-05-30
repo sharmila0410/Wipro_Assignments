@@ -1,0 +1,33 @@
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white; /* Background color for the navigation bar */
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111; /* Background color when hovering over a link */
+}
+
+/* Highlight the current/active link */
+nav ul li a.active {
+    background-color: black; /* Background color for the active link */
+}
+
+.section {
+    padding: 20px;
+}
