@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable
+        name="viewModel"
+        type="com.example.vehiclehealthmonitor.DashboardViewModel" />
+</data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvEngineHealth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Engine Health: "
+        android:textColor="@color/teal"
+        android:text="@{String.valueOf(viewModel.engineHealth)}" />
+
+    <TextView
+        android:id="@+id/tvOilLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oil Level: "
+        android:textColor="@color/teal"
+        android:text="@{String.valueOf(viewModel.oilLevel)}" />
+
+    <TextView
+        android:id="@+id/tvTirePressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tire Pressure: "
+        android:textColor="@color/teal"
+        android:text="@{String.valueOf(viewModel.tirePressure)}" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Issue"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/mustard_yellow"
+        android:onClick="@{() -> viewModel.reportIssue()}" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Maintenance"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/jade_green"
+        android:onClick="@{() -> viewModel.requestMaintenance()}" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal"
+        android:onClick="@{() -> viewModel.goToSettings()}" />
+</LinearLayout>
+</layout>

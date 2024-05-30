@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.vehiclehealthmonitor.SettingsViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/etMinTirePressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Min Tire Pressure"
+            android:text="@={viewModel.minTirePressure}"
+            android:backgroundTint="@color/teal"
+            android:textColor="@color/teal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/mustard_yellow"
+            android:onClick="@{() -> viewModel.saveSettings()}"
+            android:text="Save"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</layout>
